@@ -3,6 +3,12 @@ class Band:
         self.name = name
         self.members = members
 
+    def __str__(self):
+        return f'Band: {self.name}, Members: {", ".join(self.members)}'
+
+    def __repr__(self):
+        return f'<Band class. Name: {self.name}, Members: {self.members}>'
+
     def play_solos(self):
         return [member.play_solo() for member in self.members]
 
